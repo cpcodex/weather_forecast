@@ -1,17 +1,3 @@
-"""
-API key from weather service provider
-
-utilize intall requests with pip
-
-make API request calls, fetch weather data city or location
-
-Parse the JSON data, extract necessary data
-
-Display weather information in the terminal
-
-Handle all errors
-"""
-# libraries
 import requests as req
     
 def req_url():
