@@ -13,11 +13,11 @@ Handle all errors
 """
 # libraries
 import requests as req
-
-def sep():
-    print('=' * 65)
     
 def req_url():
+    def sep():
+        print('=' * 65)
+        
     sep()
     print('API URL:', r.url)
     sep()
