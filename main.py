@@ -12,7 +12,7 @@ def req_url():
     link = "http://api.weatherapi.com/v1"
 
     # user choice
-    choice = input("Get 'current' weather or a 'forecast'? ").lower().strip()
+    choice = input("Get 'current' weather or a 'forecast'?\n").lower().strip()
     # zip
     zip_code = input("Enter your Zip Code:\n")
 
@@ -54,15 +54,17 @@ def req_url():
     sep()
     print(f"\nLocation: {location_data['name']}, {location_data['region']} \n")
 
+    # process response based on choice
     if choice == "current":
-        current_data = info["current"]
+        location = info['location']
+        current = info['current']
 
-        # Loop through key/value pairs for current weather
-        for key, value in current_data.items():
-            if key == "condition":
-                print(f"condition: {value['text']}")
-            else:
-                print(f"{key}: {value}")
+        print(f"Current Weather:")
+        sep()
+        # Directly access and print only the desired key-value pairs
+        print(f"  Current Temp: {current['temp_f']}F")
+        print(f"  Feels Like:   {current['feelslike_f']}F")
+        print(f"  Condition:    {current['condition']['text']}")
 
     elif choice == "forecast":
         forecast_days = info["forecast"]["forecastday"]
