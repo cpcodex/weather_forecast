@@ -4,7 +4,8 @@ def req_url():
     def sep():
         print('=' * 65)
         
-    
+        
+        
     # default URL
     link = 'http://api.weatherapi.com/v1'
     
@@ -22,8 +23,8 @@ def req_url():
     
     payload = {'key': API_KEY, 'q': zip_code, 'days': num_days} # parameters
     
-    request_url = f'{link}{cur_weath}'
     # format URL
+    request_url = f'{link}{cur_weath}'
     r = req.get(request_url, params=payload) 
     
     # call information
