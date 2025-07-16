@@ -1,7 +1,7 @@
 import requests as req
 
-# API key
-API_KEY = "00a142a6d6ae4444af353824251607"
+# API key, TODO add .env for API key
+API_KEY = ""
 
 
 def sep():
