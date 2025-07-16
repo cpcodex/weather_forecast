@@ -4,7 +4,7 @@ def req_url():
     def sep():
         print('=' * 65)
         
-        
+    API_KEY = ''    
         
     # default URL
     link = 'http://api.weatherapi.com/v1'
