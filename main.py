@@ -43,8 +43,13 @@ def req_url():
     
      # format terminal
     sep()
-    print('API URL:', r.url)
-    print("Status Code:", r.status_code)
+    if r.status_code != 200:
+        sep()
+        print(f"Error: Status Code {r.status_code}")
+        print(f"API Response: {r.text}")
+        sep()
+    else:
+        print("Status Code:", r.status_code)
     sep()
     print(f"\nLocation: {location_data['name']}, {location_data['region']} \n")
     
