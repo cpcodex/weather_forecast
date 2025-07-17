@@ -1,4 +1,4 @@
-<b>UNDER MAINTENANCE</b>
+<b>⚠️UNDER MAINTENANCE⚠️</b>
 
 A command line weather forecast application, built to pratice working with APIs and request data, filter and formating to a clean experience for the end user.
 
