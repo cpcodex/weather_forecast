@@ -46,12 +46,11 @@ def weather_data(endpoint, payload):
     info = r.json()
     return info
     
-
 def display_current_weather(info):
     # index dataset
     current = info['current']
     
-    print(f"Current Weather:")
+    print(f"\nCurrent Weather:")
     sep()
     # Directly access and print only the desired key-value pairs
     print(f"  Current Temp: {current['temp_f']}F")
@@ -62,7 +61,7 @@ def display_forecast(info):
     # index dataset
     forecast_days = info["forecast"]["forecastday"]
     
-    print(f"\nFound {len(forecast_days)}-day forecast:\n")
+    print(f"\nFound {len(forecast_days)}-day forecast:")
 
     for day_data in forecast_days:
         sep()
@@ -86,7 +85,7 @@ def main():
     
     # location data
     location = info['location']
-    print(f"\nLocation: {location['name']}, {location['region']}\n")
+    print(f"\nLocation: {location['name']}, {location['region']}")
     
     sep()
     # format terminal
