@@ -1,7 +1,12 @@
 import requests as req
+import os
+from dotenv import load_dotenv
+
+# load .env
+load_dotenv()
 
 # API key, TODO add .env for API key
-API_KEY = ""
+API_KEY = os.getenv("API_KEY")
 
 
 def sep():
